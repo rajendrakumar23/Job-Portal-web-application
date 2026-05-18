@@ -1,83 +1,4 @@
-// import { useState } from "react";
-// import axios from "axios";
 
-// const AIChatbot = () => {
-//   const [message, setMessage] = useState("");
-//   const [reply, setReply] = useState("");
-//   const [loading, setLoading] = useState(false);
-
-//   const sendMessage = async () => {
-//     if (!message) return;
-
-//     try {
-//       setLoading(true);
-
-//       const res = await axios.post(
-//         "http://localhost:5000/api/ai/chat",
-//         {
-//           message,
-//         }
-//       );
-
-//       console.log(res.data);
-
-//       setReply(res.data.reply);
-//     } catch (error) {
-//       console.log(error);
-
-//       setReply("AI not responding");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     // <div className="fixed bottom-5 right-5 bg-white p-4 rounded-xl shadow-xl w-80 z-50">
-//     // 
-//     <div className="fixed bottom-5 right-5 bg-white p-4 rounded-2xl shadow-2xl w-[320px] h-[380px] z-50 flex flex-col">
-//       <h2 className="font-bold mb-2 text-lg">
-//         AI Career Assistant
-//       </h2>
-
-//       {/* <textarea
-//          className="border w-full p-2 rounded resize-none"
-//         rows="4"
-//         placeholder="Ask anything..."
-//         value={message}
-//         onChange={(e) => setMessage(e.target.value)}
-//       /> */}
-//       <textarea
-//   className="border w-full p-2 rounded resize-none outline-none"
-//   rows="3"
-//   placeholder="Ask anything..."
-//   value={message}
-//   onChange={(e) => setMessage(e.target.value)}
-//   onKeyDown={(e) => {
-//     if (e.key === "Enter" && !e.shiftKey) {
-//       e.preventDefault();
-//       sendMessage();
-//     }
-//   }}
-// />
-
-//       <button
-//         onClick={sendMessage}
-//         className="bg-blue-600 text-white px-4 py-2 rounded mt-2 w-full"
-//       >
-//         {loading ? "Thinking..." : "Ask AI"}
-//       </button>
-
-//       {/* <div className="mt-4 text-sm border-t pt-2 flex-1 overflow-y-auto"> */}
-//       <div className="mt-3 text-sm border-t pt-3 flex-1 overflow-y-auto">
-//   {reply}
-// </div>
-//     </div>
-//   );
-// };
-
-// export default AIChatbot;
-
-// import { useState } from "react";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
@@ -113,7 +34,8 @@ const AIChatbot = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/ai/chat",
+        // "http://localhost:5000/api/ai/chat",
+        "https://job-portal-web-application-backend-ob93.onrender.com/api/ai/chat",
         {
           message: currentMessage,
         }
