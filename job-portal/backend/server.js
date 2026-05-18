@@ -26,9 +26,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173',
-  "https://your-netlify-url.netlify.app",
-  ],
+  origin: 'http://localhost:5173',
   credentials: true,
 }));
 
