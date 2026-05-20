@@ -43,6 +43,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
           <p>© {new Date().getFullYear()} JobSphere. All rights reserved.</p>
+          <p>Rajendra Kumar</p>
           <p>Built with React, Node.js & MongoDB</p>
         </div>
       </div>

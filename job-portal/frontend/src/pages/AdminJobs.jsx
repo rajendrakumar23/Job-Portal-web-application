@@ -5,6 +5,13 @@ import { PageLoader } from '../components/common/Spinner.jsx';
 import Modal from '../components/common/Modal.jsx';
 import toast from 'react-hot-toast';
 
+  const F = ({ label, required, children }) => (
+    <div>
+      <label className="label">{label}{required && <span className="text-red-500 ml-0.5">*</span>}</label>
+      {children}
+    </div>
+  );
+
 const EMPTY_JOB = {
   title: '', company: '', location: '', type: 'Full-time', category: 'Technology',
   description: '', salaryMin: '', salaryMax: '', experience: 'fresher',
@@ -106,12 +113,7 @@ export default function AdminJobs() {
     } catch { toast.error('Failed to update job'); }
   };
 
-  const F = ({ label, required, children }) => (
-    <div>
-      <label className="label">{label}{required && <span className="text-red-500 ml-0.5">*</span>}</label>
-      {children}
-    </div>
-  );
+
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
