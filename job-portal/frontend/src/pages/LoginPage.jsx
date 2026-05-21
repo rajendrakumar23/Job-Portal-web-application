@@ -138,11 +138,11 @@ export default function LoginPage() {
           </div>
 
           {/* Demo Credentials */}
-          <div className="mt-4 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-xs text-amber-700 dark:text-amber-400">
+          {/* <div className="mt-4 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-xs text-amber-700 dark:text-amber-400">
             <p className="font-semibold mb-1">Demo credentials:</p>
             <p>Admin: admin@jobsphere.com / admin123</p>
             <p>User: user@jobsphere.com / user1234</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
